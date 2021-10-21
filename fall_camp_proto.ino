@@ -1,5 +1,4 @@
 #define Lswitch 14
-#define codePin 15
 #define trigPin 12
 #define echoPin 11
 
