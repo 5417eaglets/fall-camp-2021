@@ -20,8 +20,6 @@ void setup() {
 
   pinMode(Lswitch, INPUT);
 
-  pinMode(codePin, INPUT);
-  
   // Setup motors
   int i;
   for(i = 0; i < 3; i++){
