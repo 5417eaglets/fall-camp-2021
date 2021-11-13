@@ -11,6 +11,7 @@ int motorRight[] = {8, 7, 9};
 // —————————————————————————  Ultrasonic Variables
 float duration;
 int distance;
+int counter;
 
 void setup() {
   Serial.begin(9600);
