@@ -34,7 +34,7 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly: 
-  distance = runUltraSonicSensor();
+  distance = getDistance();
   
   if(){
   
@@ -98,7 +98,7 @@ void driveRightMotorBackward(int power){
   digitalWrite(motorRight[1], LOW); 
 }
 
-int runUltraSonicSensor(){
+int getDistance(){
   digitalWrite(trigPin, LOW);
   delayMicroseconds(2);
   digitalWrite(trigPin, HIGH);
