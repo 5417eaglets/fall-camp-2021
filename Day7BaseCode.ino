@@ -34,6 +34,7 @@ void loop() {
   
   
 }
+// ------------------------------ Camper drive functions
 
 void driveForward(int power){
   driveLeftMotorForward(power);
@@ -43,6 +44,18 @@ void driveForward(int power){
 void driveBackward(int power){
   driveLeftMotorBackward(power);
   driveRightMotorBackward(power);
+}
+
+void turnRight(){
+  driveLeftMotorForward(150);
+  driveRightMotorForward(0);
+  delay(750);
+}
+
+void turnLeft(){
+  driveRightMotorForward(150);
+  driveLeftMotorForward(0);
+  delay(750);
 }
 
 // ------------------------------ Pre-made drive functions
