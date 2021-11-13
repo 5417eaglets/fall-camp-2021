@@ -11,15 +11,17 @@ int motorRight[] = {8, 7, 9};
 // —————————————————————————  Ultrasonic Variables
 float duration;
 int distance;
-bool forward = true;
 
 void setup() {
   Serial.begin(9600);
 
   pinMode(redLED, OUTPUT);
   pinMode(blueLED, OUTPUT);
-
+  
   pinMode(Lswitch, INPUT);
+  
+  pinMode(trigPin, OUTPUT);
+  pinMode(echoPin, INPUT);
   
   // Setup motors
   int i;
@@ -106,7 +108,7 @@ int runUltraSonicSensor(){
   
   duration = pulseIn(echoPin, HIGH);
   distance = duration * .034 / 2;
-  Serial.println(distance);
+  // Serial.println(distance);
 
   return distance;
 }
