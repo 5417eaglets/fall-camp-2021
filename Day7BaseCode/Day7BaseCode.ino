@@ -11,7 +11,6 @@ int motorRight[] = {8, 7, 9};
 // —————————————————————————  Ultrasonic Variables
 float duration;
 int distance;
-unsigned long prevTime = 0;
 bool forward = true;
 
 void setup() {
@@ -33,11 +32,24 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly: 
+  distance = runUltraSonicSensor();
   
+  if(){
+  
+  }
+  else if(){
+  
+  }
+  else if(){
+  
+  }
+  else if(){
+  
+  }
   
 }
-// ------------------------------ Camper drive functions
 
+// ------------------------------ Camper drive functions
 void driveForward(int power){
   driveLeftMotorForward(power);
   driveRightMotorForward(power);
@@ -95,16 +107,6 @@ int runUltraSonicSensor(){
   duration = pulseIn(echoPin, HIGH);
   distance = duration * .034 / 2;
   Serial.println(distance);
-
-  if(millis() - prevTime >= 1000){
-    forward = !forward;
-    prevTime = millis();
-  }
-  if(forward){
-    driveForward(150);
-  }else{
-    driveBackward(150);
-  }
 
   return distance;
 }
