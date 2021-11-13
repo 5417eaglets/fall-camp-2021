@@ -30,7 +30,6 @@ void setup() {
     pinMode(motorLeft[i], OUTPUT);
     pinMode(motorRight[i], OUTPUT);
   }
-  
 }
 
 void loop() {
@@ -49,7 +48,6 @@ void loop() {
   else if(){
   
   }
-  
 }
 
 // ------------------------------ Camper drive functions
@@ -109,7 +107,6 @@ int runUltraSonicSensor(){
   
   duration = pulseIn(echoPin, HIGH);
   distance = duration * .034 / 2;
-  // Serial.println(distance);
 
   return distance;
 }
